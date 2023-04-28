@@ -1,0 +1,89 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  text-align: center;
+}
+
+.range{
+  height: 80px;
+  width: 380px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 0 65px 0 45px;
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
+}
+.sliderValue{
+  position: relative;
+  width: 100%;
+}
+.sliderValue span{
+  position: absolute;
+  height: 45px;
+  width: 45px;
+  transform: translateX(-70%) scale(0);
+  font-weight: 600;
+  top: -10px;
+  line-height: 55px;
+  z-index: 2;
+  color: red;
+
+}
+.sliderValue span.show{
+  transform: translateX(-70%) scale(1);
+}
+.sliderValue span:after{
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+
+}
+.field{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+}
+.field .value{
+  position: absolute;
+  font-size: 18px;
+  color: black;
+  font-weight: 600;
+}
+.field .value.left{
+  left: -22px;
+}
+.field .value.right{
+  right: -43px;
+}
+.range input{
+  -webkit-appearance: none;
+  width: 100%;
+  height: 3px;
+  background: black;
+  outline: none;
+  border: none;
+
+}
+.range input::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: red;
+  background: red;
+  cursor: pointer;
+}
+
+#markers {
+
+  justify-content: space-between;
+  writing-mode: vertical-lr;
+  width: 20px;
+}
